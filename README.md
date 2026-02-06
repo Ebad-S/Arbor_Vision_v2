@@ -8,11 +8,11 @@ Professional **Arbor Vision Consulting** website for **Mike Daws** built as a li
 
 ## Principles
 
-- **Mobile-first** — designed for phones first, scales up gracefully.
-- **Performance** — static HTML, tiny CSS, minimal JS modules. No frameworks.
-- **SEO** — semantic HTML, structured data (JSON-LD), meta tags, sitemap, robots.txt.
-- **Accessibility** — keyboard navigation, focus-visible, respects `prefers-reduced-motion`.
-- **No contact form** — calls and emails only (click-to-call, click-to-email).
+- **Mobile-first** : designed for phones first, scales up gracefully.
+- **Performance** : static HTML, tiny CSS, minimal JS modules. No frameworks.
+- **SEO** : semantic HTML, structured data (JSON-LD), meta tags, sitemap, robots.txt.
+- **Accessibility** : keyboard navigation, focus-visible, respects `prefers-reduced-motion`.
+- **No contact form** : calls and emails only (click-to-call, click-to-email).
 
 ## Quick Start
 
@@ -63,7 +63,7 @@ The production build outputs to `_site/`. Deploy this folder to any static host.
 
 - Ensure all placeholder content (marked with `<!-- TODO: ... -->`) is replaced before deploying.
 - Run `npm run build` and check the `_site/` folder for the final output.
-- No server-side runtime required — pure static files.
+- No server-side runtime required, pure static files.
 - See [Deployment.md](Deployment.md) for full VPS hosting instructions.
 
 ## Lighthouse Performance Analysis
