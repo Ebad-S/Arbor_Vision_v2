@@ -1,0 +1,46 @@
+{
+  "name": "Arbor Vision Consulting",
+  "tagline": "Arboricultural consulting services by Mike Daws. Qualified, insured, and local to the Blue Mountains.",
+  "url": "https://www.arborvision.consulting",
+  "phone": "(+61) 404 260 489",
+  "phoneRaw": "+61404260489",
+  "email": "mike@arborvision.consulting",
+  "ogImage": "",
+  "abn": "",
+  "insurance": "",
+  "hours": "Weekdays 8:30 AM - 5:00 PM. Saturday & Sunday Closed.",
+  "address": "18 St Albans Rd, Medlow Bath NSW 2780",
+  "navigation": [
+    { "label": "Home", "url": "/" },
+    { "label": "Services", "url": "/services/" },
+    { "label": "DA Support", "url": "/da-support/" },
+    { "label": "Credentials", "url": "/credentials/" },
+    { "label": "Contact", "url": "/contact/" }
+  ],
+  "services": [
+    { "name": "Health & Structural Assessments", "slug": "health-structural-assessments", "url": "/services/health-structural-assessments/", "excerpt": "Thorough health, condition and structural assessments with clear recommendations.", "image": "/assets/images/service-tree-pruning.jpg" },
+    { "name": "Aerial Inspections", "slug": "aerial-inspections", "url": "/services/aerial-inspections/", "excerpt": "Level 5 aerial assessments by a climbing consulting arborist - a rare combination of skills.", "image": "/assets/images/service-tree-removal.jpg" },
+    { "name": "Hazard & Risk Assessment", "slug": "hazard-risk-assessment", "url": "/services/hazard-risk-assessment/", "excerpt": "Formal risk assessment and reporting under the QTRA framework.", "image": "/assets/images/tree-health.jpg" },
+    { "name": "DA Support & Tree Reports", "slug": "da-support-tree-reports", "url": "/services/da-support-tree-reports/", "excerpt": "Arboricultural impact assessments, preliminary assessments and tree removal/retention plans for Development Applications.", "image": "/assets/images/service-arborist-reports.jpg" },
+    { "name": "Root Mapping", "slug": "root-mapping", "url": "/services/root-mapping/", "excerpt": "Non-invasive root mapping to inform construction and tree protection planning.", "image": "/assets/images/service-stump-grinding.jpg" },
+    { "name": "Tree Advice", "slug": "tree-advice", "url": "/services/tree-advice/", "excerpt": "Independent, qualified advice on tree health, safety, pruning needs and neighbour disputes.", "image": "/assets/images/service-hedge-trimming.jpg" }
+  ],
+  "serviceAreas": [
+    "Blue Mountains",
+    "Katoomba",
+    "Leura",
+    "Wentworth Falls",
+    "Springwood",
+    "Blackheath",
+    "Medlow Bath",
+    "Penrith",
+    "Greater Western Sydney"
+  ],
+  "certificates": [
+    { "name": "AQF Level 5 - Consulting Arborist", "desc": "Diploma of Arboriculture - qualified to prepare council-accepted arborist reports", "image": "/assets/icons/cert-placeholder.svg" },
+    { "name": "AQF Level 3 - Climbing Arborist", "desc": "Certificate III in Arboriculture - practical tree climbing and maintenance", "image": "/assets/icons/cert-placeholder.svg" },
+    { "name": "QTRA Qualified", "desc": "Quantified Tree Risk Assessment - formal risk assessment framework", "image": "/assets/icons/cert-placeholder.svg" },
+    { "name": "Fully Insured", "desc": "Public Liability Insurance - confirmation pending", "image": "/assets/icons/cert-placeholder.svg" }
+  ],
+  "googleReviewsUrl": "https://www.google.com/search?q=Arbor+Vision+Consulting+Reviews"
+}

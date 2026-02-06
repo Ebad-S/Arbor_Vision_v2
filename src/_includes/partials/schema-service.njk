@@ -1,0 +1,25 @@
+{# JSON-LD Service schema - for service detail pages #}
+{% if service %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ service.name }}",
+  "description": "{{ service.excerpt }}",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "{{ site.name }}"{% if site.url %},
+    "url": "{{ site.url }}"{% endif %}{% if site.phone %},
+    "telephone": "{{ site.phone }}"{% endif %}
+  },
+  "areaServed": [
+    {% for area in site.serviceAreas %}
+    {
+      "@type": "City",
+      "name": "{{ area }}"
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}

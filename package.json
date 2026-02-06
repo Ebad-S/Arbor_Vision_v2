@@ -1,0 +1,15 @@
+{
+  "name": "arborvision-v2",
+  "version": "1.0.0",
+  "description": "Arborvision v2 — Mike Daws arborist website. Lightweight, mobile-first, SEO-strong static site built with Eleventy.",
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve --watch",
+    "build": "npx @11ty/eleventy"
+  },
+  "keywords": ["arborist", "tree-services", "eleventy", "static-site"],
+  "author": "Serenity Webcrafts",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

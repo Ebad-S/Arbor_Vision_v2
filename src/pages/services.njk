@@ -1,0 +1,95 @@
+---
+layout: layouts/base.njk
+title: Services
+description: Arboricultural consulting services including health assessments, aerial inspections, hazard assessment, DA support, root mapping and tree advice.
+permalink: /services/
+heroImage: /assets/images/hero-bg.jpg
+---
+
+<section class="hero hero--short">
+  <div class="hero__bg">
+    <img
+      src="/assets/images/hero-bg.jpg"
+      alt="Tree canopy in the Blue Mountains"
+      width="1600"
+      height="900"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+    >
+  </div>
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <span class="hero__eyebrow">What We Do</span>
+    <h1 class="hero__title">Our Services</h1>
+    <p class="hero__desc">Qualified arboricultural consulting for the Blue Mountains and greater Western Sydney.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <span class="section-header__eyebrow">Arboricultural Consulting</span>
+      <h2 class="section-header__title">How We Can Help</h2>
+      <p class="section-header__desc">From health assessments to DA reports and independent tree advice - Mike provides qualified, practical guidance you can trust.</p>
+    </div>
+
+    <div class="grid grid--3">
+      {% for service in site.services %}
+        <a href="{{ service.url }}" class="card" data-reveal>
+          <img
+            src="{{ service.image }}"
+            alt="{{ service.name }}"
+            class="card__image"
+            width="800"
+            height="500"
+            loading="lazy"
+            decoding="async"
+          >
+          <div class="card__body">
+            <h3 class="card__title">{{ service.name }}</h3>
+            <p class="card__text">{{ service.excerpt }}</p>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ===== NEIGHBOUR DISPUTES ===== #}
+<section class="section section--alt">
+  <div class="container container--narrow text-center" data-reveal>
+    <h2>Neighbour Tree Disputes?</h2>
+    <p class="mt-md">Tree disagreements between neighbours can be stressful. Mike provides independent, qualified assessments that help both parties understand the situation clearly. Whether it's overhanging branches, root damage, or safety concerns - an expert opinion can go a long way toward a fair resolution.</p>
+    <p class="mt-lg">
+      <a href="/contact/" class="btn btn--primary">Talk to Mike</a>
+    </p>
+  </div>
+</section>
+
+{# ===== SERVICE AREAS ===== #}
+<section class="section">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <span class="section-header__eyebrow">Where We Work</span>
+      <h2 class="section-header__title">Service Areas</h2>
+      <p class="section-header__desc">Mike is a Blue Mountains local, based in Medlow Bath. Services extend across the greater Western Sydney region.</p>
+    </div>
+
+    <div class="text-center" data-reveal>
+      <details class="service-areas-dropdown">
+        <summary class="btn btn--secondary">View All Service Areas</summary>
+        <div class="service-areas-list mt-lg">
+          <div class="grid grid--3">
+            {% for area in site.serviceAreas %}
+              <div class="text-center">
+                <p class="font-semibold">{{ area }}</p>
+              </div>
+            {% endfor %}
+          </div>
+          <p class="mt-lg text-muted text-center">Not sure if we cover your area? Give Mike a call - he may still be able to help.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>

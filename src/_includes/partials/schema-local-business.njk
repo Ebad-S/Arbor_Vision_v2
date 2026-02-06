@@ -1,0 +1,30 @@
+{# JSON-LD LocalBusiness schema - site-wide #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "{{ site.name }}",
+  {% if site.url %}"url": "{{ site.url }}",{% endif %}
+  {% if site.phoneRaw %}"telephone": "{{ site.phoneRaw }}",{% endif %}
+  {% if site.email %}"email": "{{ site.email }}",{% endif %}
+  "description": "{{ site.tagline }}",
+  {% if site.address %}"address": {
+    "@type": "PostalAddress",
+    "streetAddress": "18 St Albans Rd",
+    "addressLocality": "Medlow Bath",
+    "addressRegion": "NSW",
+    "postalCode": "2780",
+    "addressCountry": "AU"
+  },{% endif %}
+  {% if site.abn %}"taxID": "{{ site.abn }}",{% endif %}
+  "areaServed": [
+    {% for area in site.serviceAreas %}
+    {
+      "@type": "City",
+      "name": "{{ area }}"
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ],
+  "priceRange": "$$"
+}
+</script>

@@ -1,0 +1,288 @@
+---
+layout: layouts/base.njk
+title: Arboricultural Consulting Services - Blue Mountains
+description: Arbor Vision Consulting - qualified arborist Mike Daws provides expert tree assessments, DA support, risk assessment and tree advice in the Blue Mountains and greater Western Sydney.
+permalink: /
+heroImage: /assets/images/hero-bg-1.jpg
+---
+
+{# ===== HERO ===== #}
+<section class="hero">
+  <div class="hero__bg">
+    <img
+      src="/assets/images/hero-bg-1.jpg"
+      alt="Tall eucalyptus trees in the Blue Mountains"
+      width="1600"
+      height="900"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+    >
+  </div>
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <span class="hero__eyebrow">Qualified Consulting Arborist - Blue Mountains</span>
+    <h1 class="hero__title">Professional Arboricultural Consulting</h1>
+    <p class="hero__desc">Expert tree assessments, DA support, and independent advice<br><strong>by Mike Daws.</strong></p>
+    <div class="hero__actions">
+      <a href="/contact/" class="btn btn--light btn--lg">Get in Touch</a>
+      <a href="/services/" class="btn btn--secondary btn--lg" style="border-color: #fff; color: #fff;">View Services</a>
+    </div>
+  </div>
+</section>
+
+{# ===== TRUST STRIP ===== #}
+{% include "partials/trust-strip.njk" %}
+
+{# ===== WHY CHOOSE ARBOR VISION CONSULTING ===== #}
+<section class="section">
+  <div class="container">
+    <div class="grid grid--2" style="align-items: center;">
+      <div data-reveal>
+        <span class="section-header__eyebrow">About Mike</span>
+        <h2>Why Choose Arbor Vision Consulting</h2>
+        <p class="mt-md">Mike Daws is the director and principal arborist at Arbor Vision Consulting. He is qualified both as a climbing arborist (AQF Level 3) and as a consulting arborist (AQF Level 5). Mike is also qualified under the Quantified Tree Risk Assessment framework (QTRA) to conduct formal risk assessment and reporting.</p>
+        <p class="mt-md">A background climbing and working in damaged trees has built a strong knowledge base around their behaviour and biomechanics. Mike is uniquely positioned to undertake Level 5 aerial assessments as a climbing consulting arborist.</p>
+        <p class="mt-md">Mike has a strong eye for assessing tree condition and identifying structural defects. He prefers to retain trees whenever possible, and can diagnose health, pest, disease and structural issues, offering a plan for remediation.</p>
+        <p class="mt-lg">
+          <a href="/credentials/" class="btn btn--secondary">View Credentials</a>
+        </p>
+      </div>
+      <div data-reveal>
+        <img
+          src="/assets/images/mike-about.png"
+          alt="Mike Daws conducting an aerial tree inspection with climbing gear"
+          width="800"
+          height="450"
+          loading="lazy"
+          decoding="async"
+          style="border-radius: var(--radius-lg); width: 100%; height: auto; object-fit: cover;"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ===== SERVICES CAROUSEL ===== #}
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <span class="section-header__eyebrow">What We Do</span>
+      <h2 class="section-header__title">Our Services</h2>
+      <p class="section-header__desc">Comprehensive arboricultural consulting for homeowners, developers, councils and anyone who needs qualified advice about trees - including help with neighbour disputes.</p>
+    </div>
+
+    <div class="carousel" data-reveal>
+      <div class="carousel__track">
+        {% for service in site.services %}
+          <div
+            class="carousel__card"
+            data-title="{{ service.name }}"
+            data-excerpt="{{ service.excerpt }}"
+            data-image="{{ service.image }}"
+            data-url="{{ service.url }}"
+            role="button"
+            tabindex="0"
+            aria-label="View details for {{ service.name }}"
+          >
+            <img
+              src="{{ service.image }}"
+              alt="{{ service.name }}"
+              class="carousel__card-image"
+              width="800"
+              height="500"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="carousel__card-body">
+              <h3 class="carousel__card-title">{{ service.name }}</h3>
+              <p class="carousel__card-text">{{ service.excerpt }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="carousel__nav">
+        <button class="carousel__prev" aria-label="Previous service">&larr;</button>
+        <button class="carousel__next" aria-label="Next service">&rarr;</button>
+      </div>
+    </div>
+
+    <div class="text-center mt-xl" data-reveal>
+      <p class="text-muted">Dealing with a tree dispute between neighbours? Mike provides independent, qualified assessments that can help resolve disagreements fairly.</p>
+    </div>
+
+    <div class="text-center mt-lg">
+      <a href="/services/" class="btn btn--primary">All Services</a>
+    </div>
+  </div>
+</section>
+
+{# ===== SERVICE POPUP OVERLAY ===== #}
+<div id="service-popup" class="service-popup" role="dialog" aria-modal="true" aria-label="Service details">
+  <div class="popup__inner">
+    <img src="" alt="" class="popup__image" width="576" height="324" loading="lazy" decoding="async">
+    <div class="popup__body">
+      <h3 class="popup__title"></h3>
+      <p class="popup__text"></p>
+      <div class="popup__actions">
+        <a href="" class="popup__link btn btn--primary btn--sm">More Details</a>
+        <button class="popup__close" type="button">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# ===== DA SUPPORT HIGHLIGHT ===== #}
+<section class="section">
+  <div class="container">
+    <div class="grid grid--2" style="align-items: center;">
+      <div data-reveal>
+        <span class="section-header__eyebrow">DA Support</span>
+        <h2>Development Application Tree Reports</h2>
+        <p class="mt-md">Submitting a development application? Your council may require an arborist report from an AQF Level 5 qualified arborist. Mike prepares professional reports including arboricultural impact assessments, preliminary assessments, and tree removal/retention plans.</p>
+        <p class="mt-md">AutoCAD is used to produce detailed and accurate assessments. Reports are prepared to satisfy council specifications.</p>
+        <p class="mt-lg">
+          <a href="/da-support/" class="btn btn--primary">Learn More</a>
+        </p>
+      </div>
+      <div data-reveal>
+        <img
+          src="/assets/images/hero-da-support.jpg"
+          alt="Tree canopy assessment for development application"
+          width="800"
+          height="600"
+          loading="lazy"
+          decoding="async"
+          style="border-radius: var(--radius-lg); width: 100%; height: auto; object-fit: cover;"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ===== GOOGLE REVIEWS ===== #}
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <span class="section-header__eyebrow">What People Say</span>
+      <h2 class="section-header__title">Client Reviews</h2>
+      <p class="section-header__desc">See what our clients have to say about working with Arbor Vision Consulting.</p>
+    </div>
+
+    <div class="reviews-header text-center" data-reveal>
+      <div class="reviews-badge">
+        <svg class="reviews-badge__google-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
+          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+        </svg>
+        <p class="reviews-badge__stars" aria-label="5 star rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="reviews-badge__text">5.0 Rated on Google</p>
+      </div>
+    </div>
+
+    <div class="reviews-grid" data-reveal>
+      <div class="review-card">
+        <div class="review-card__header">
+          <div class="review-card__avatar">JJ</div>
+          <div>
+            <p class="review-card__name">Jenny Jorgensen</p>
+            <p class="review-card__stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          </div>
+          <svg class="review-card__google" width="20" height="20" viewBox="0 0 24 24" aria-label="Google review">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+        </div>
+        <p class="review-card__text">"We were very impressed over how much care and time Mike took with his assessment. He and his team were very professional and efficient in everything they did, and it was great to see how thoroughly they cleared up afterwards. Our tree looks far better now - we can definitely highly recommend Mike!"</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-card__header">
+          <div class="review-card__avatar">TR</div>
+          <div>
+            <p class="review-card__name">Tom Ray</p>
+            <p class="review-card__stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          </div>
+          <svg class="review-card__google" width="20" height="20" viewBox="0 0 24 24" aria-label="Google review">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+        </div>
+        <p class="review-card__text">"Mike is brilliant. His most admirable trait is that he is a true tree conservationist, who puts tree preservation above his own income potential."</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-card__header">
+          <div class="review-card__avatar">RA</div>
+          <div>
+            <p class="review-card__name">Ronaz Azazil</p>
+            <p class="review-card__stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          </div>
+          <svg class="review-card__google" width="20" height="20" viewBox="0 0 24 24" aria-label="Google review">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+        </div>
+        <p class="review-card__text">"Absolutely outstanding service from start to finish. Mike is not only highly knowledgeable and professional, but also genuinely passionate about trees and environmental care. He clearly values integrity and objectivity in his work. If you're looking for someone who truly knows what they're doing, I can't recommend Arbor Vision Consulting highly enough."</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-xl" data-reveal>
+      <a href="{{ site.googleReviewsUrl }}" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="flex-shrink:0;">
+          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#fff"/>
+          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#fff"/>
+          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#fff"/>
+          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#fff"/>
+        </svg>
+        Read All Google Reviews
+      </a>
+    </div>
+  </div>
+</section>
+
+{# ===== CREDENTIALS (minimized) ===== #}
+<section class="section">
+  <div class="container container--narrow text-center" data-reveal>
+    <span class="section-header__eyebrow">Trust & Credentials</span>
+    <h2>Qualified & Insured</h2>
+    <p class="mt-md text-muted">Mike holds nationally recognised arboriculture qualifications including AQF Level 5 (Consulting Arborist), AQF Level 3 (Climbing Arborist), and QTRA certification for formal risk assessment.</p>
+    <p class="mt-lg">
+      <a href="/credentials/" class="btn btn--secondary">View Full Credentials</a>
+    </p>
+  </div>
+</section>
+
+{# ===== PERSONAL PROFILE ===== #}
+<section class="section section--alt profile-section">
+  <div class="container">
+    <div class="grid grid--2" style="align-items: center;">
+      <div data-reveal>
+        <img
+          src="/assets/images/mike-2.png"
+          alt="Mike Daws at the top of a tree in the Blue Mountains"
+          class="profile-section__image"
+          width="800"
+          height="300"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+      <div data-reveal>
+        <span class="section-header__eyebrow">Personal Profile</span>
+        <h2>A Genuine Love for Trees</h2>
+        <p class="mt-md">Mike Daws is a passionate arborist with a genuine love for trees. Mike has a background in tree climbing, previously running a business specialising in tree maintenance, difficult access pruning and habitat creation. A progression to consulting was only natural, building on the strong familiarity with the physiology and behaviour of trees earned through a career of pruning.</p>
+        <p class="mt-md">Mike's other passion sees him spending time amongst the many cliff faces around his home in the Blue Mountains, climbing rock instead of trees.</p>
+      </div>
+    </div>
+  </div>
+</section>
+

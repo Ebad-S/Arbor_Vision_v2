@@ -1,0 +1,117 @@
+---
+pagination:
+  data: site.services
+  size: 1
+  alias: service
+permalink: "/services/{{ service.slug }}/"
+layout: layouts/base.njk
+---
+
+<section class="hero hero--short">
+  <div class="hero__bg">
+    <img
+      src="{{ service.image }}"
+      alt="{{ service.name }}"
+      width="1600"
+      height="900"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+    >
+  </div>
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <span class="hero__eyebrow">Our Services</span>
+    <h1 class="hero__title">{{ service.name }}</h1>
+    <p class="hero__desc">{{ service.excerpt }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid--2" style="align-items: flex-start;" data-reveal>
+      <div>
+        <h2>About {{ service.name }}</h2>
+
+        {% if service.slug == "health-structural-assessments" %}
+          <p class="mt-md">A comprehensive tree health and structural assessment is the foundation of sound arboricultural management. Mike conducts thorough visual assessments of tree health, vigour, structure and condition, identifying potential hazards, disease, pest activity and structural weaknesses that may not be apparent to the untrained eye.</p>
+          <p class="mt-md">Each assessment includes a detailed evaluation of the tree's canopy, trunk, root zone and surrounding environment. Mike documents his findings with photographs and measurements, providing clear, actionable recommendations tailored to the specific needs of each tree.</p>
+          <p class="mt-md">Whether you're a homeowner concerned about a backyard tree, a property manager responsible for multiple sites, or a council needing an independent opinion, Mike's assessments give you the expert insight you need to make informed decisions about tree management.</p>
+
+        {% elif service.slug == "aerial-inspections" %}
+          <p class="mt-md">Aerial inspections provide a level of detail that ground-based assessments simply cannot match. As both a qualified climbing arborist (AQF Level 3) and consulting arborist (AQF Level 5), Mike is uniquely positioned to access and assess the upper canopy of trees - where many structural defects and health issues first become apparent.</p>
+          <p class="mt-md">By climbing into the canopy, Mike can closely inspect branch unions, cavities, decay pockets, fungal fruiting bodies and other defects that are invisible from the ground. This hands-on approach provides a significantly more accurate picture of tree condition and structural integrity.</p>
+          <p class="mt-md">Aerial inspections are particularly valuable for large or significant trees, trees adjacent to buildings or high-use areas, and situations where detailed structural information is critical to risk management decisions. Very few consulting arborists offer this service, making Arbor Vision Consulting a rare resource for thorough tree assessment.</p>
+
+        {% elif service.slug == "hazard-risk-assessment" %}
+          <p class="mt-md">Trees can present risks to people and property, and understanding those risks is essential for responsible management. Mike is qualified under the Quantified Tree Risk Assessment (QTRA) framework - the industry-leading methodology for evaluating and quantifying tree risk in a consistent, defensible manner.</p>
+          <p class="mt-md">QTRA assessments consider the likelihood of tree failure, the probability of impact, and the potential consequences - producing a quantified risk level that can be compared against accepted risk thresholds. This evidence-based approach helps property owners, councils and insurers make rational, proportionate decisions about tree management.</p>
+          <p class="mt-md">Whether you need a risk assessment for a single tree or an entire portfolio of trees across multiple sites, Mike provides thorough, independent risk assessments with clear recommendations. His reports are professionally formatted and suitable for use in insurance claims, legal proceedings and council compliance.</p>
+
+        {% elif service.slug == "da-support-tree-reports" %}
+          <p class="mt-md">Submitting a development application to council often requires a professional arborist report from an AQF Level 5 qualified arborist. Mike prepares comprehensive DA tree reports including arboricultural impact assessments, preliminary arboricultural assessments, and tree removal/retention plans that satisfy council requirements.</p>
+          <p class="mt-md">Each report is prepared to the relevant Australian Standards (AS 4970 - Protection of Trees on Development Sites) and tailored to the specific requirements of your local council. Mike uses AutoCAD to produce detailed, accurate site plans when development plans are available in this format.</p>
+          <p class="mt-md">Getting a report prepared before or during the design phase of your project can help you avoid costly redesigns and DA rejections. Mike can advise on tree protection measures, setback requirements and how to design around high-value trees - helping your application move forward with confidence.</p>
+
+        {% elif service.slug == "root-mapping" %}
+          <p class="mt-md">Understanding the location and extent of tree root systems is critical when planning construction, excavation or infrastructure work near trees. Mike provides non-invasive root mapping services to identify the presence and direction of significant structural roots, helping inform tree protection planning and construction methodology.</p>
+          <p class="mt-md">Root mapping is particularly important for development applications where proposed works encroach within the Tree Protection Zone (TPZ) or Structural Root Zone (SRZ) of trees being retained. Accurate root mapping data can support design modifications that allow both the tree and the development to coexist successfully.</p>
+          <p class="mt-md">Mike integrates root mapping findings into comprehensive arboricultural reports, providing clear guidance on where construction can and cannot safely proceed, and what tree protection measures are required to prevent root damage during and after construction.</p>
+
+        {% elif service.slug == "tree-advice" %}
+          <p class="mt-md">Sometimes you just need straightforward, qualified advice about a tree. Whether you're concerned about a tree's health, wondering about pruning needs, dealing with a neighbour dispute, or simply want an expert opinion before making a decision, Mike provides independent, practical advice you can trust.</p>
+          <p class="mt-md">As a qualified consulting arborist with a background in practical tree work, Mike can assess tree health, diagnose pest and disease issues, recommend appropriate pruning strategies, and advise on species selection and planting. His approach always prioritises tree retention where possible, offering remediation plans rather than unnecessary removal.</p>
+          <p class="mt-md">Tree disputes between neighbours can be particularly stressful. Mike provides independent, unbiased assessments that help both parties understand the situation clearly. Having a qualified expert opinion can be the key to resolving disagreements fairly and avoiding costly legal proceedings.</p>
+
+        {% else %}
+          <p class="mt-md">{{ service.excerpt }} Mike brings years of hands-on experience and nationally recognised qualifications to every assessment, ensuring thorough, professional results you can rely on.</p>
+          <p class="mt-md">Every engagement begins with a careful evaluation of your specific situation, followed by clear recommendations tailored to your needs. Mike takes the time to explain findings in plain language, so you're always informed and confident in the path forward.</p>
+        {% endif %}
+
+        <p class="mt-xl">
+          <a href="/contact/" class="btn btn--primary">Discuss Your Needs</a>
+        </p>
+      </div>
+      <div>
+        <img
+          src="{{ service.image }}"
+          alt="{{ service.name }}"
+          width="800"
+          height="600"
+          loading="lazy"
+          decoding="async"
+          style="border-radius: var(--radius-lg); width: 100%; height: auto; object-fit: cover;"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <h2 class="section-header__title">Other Services</h2>
+    </div>
+    <div class="grid grid--3">
+      {% for s in site.services %}
+        {% if s.slug != service.slug %}
+          <a href="{{ s.url }}" class="card" data-reveal>
+            <img
+              src="{{ s.image }}"
+              alt="{{ s.name }}"
+              class="card__image"
+              width="800"
+              height="500"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="card__body">
+              <h3 class="card__title">{{ s.name }}</h3>
+              <p class="card__text">{{ s.excerpt }}</p>
+            </div>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

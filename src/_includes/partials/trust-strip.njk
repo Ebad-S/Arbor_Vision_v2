@@ -1,0 +1,18 @@
+<div class="trust-strip">
+  <div class="container trust-strip__inner">
+    {% for cert in site.certificates %}
+      <div class="trust-strip__item">
+        <img
+          src="{{ cert.image }}"
+          alt=""
+          class="trust-strip__icon"
+          width="32"
+          height="32"
+          loading="eager"
+          decoding="async"
+        >
+        <span>{{ cert.name }}</span>
+      </div>
+    {% endfor %}
+  </div>
+</div>

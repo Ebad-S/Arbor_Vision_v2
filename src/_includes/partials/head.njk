@@ -1,0 +1,53 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{# Page title #}
+<title>{{ title }}{% if title %} | {% endif %}{{ site.name }}</title>
+
+{# Meta description #}
+{% if description %}
+<meta name="description" content="{{ description }}">
+{% endif %}
+
+{# Canonical URL #}
+{% if canonical %}
+<link rel="canonical" href="{{ canonical }}">
+{% elif site.url %}
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+{% endif %}
+
+{# Open Graph #}
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ title }}{% if title %} | {% endif %}{{ site.name }}">
+{% if description %}
+<meta property="og:description" content="{{ description }}">
+{% endif %}
+{% if ogImage %}
+<meta property="og:image" content="{{ ogImage }}">
+{% elif site.ogImage %}
+<meta property="og:image" content="{{ site.ogImage }}">
+{% endif %}
+{% if site.url %}
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+{% endif %}
+
+{# Twitter Card #}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title }}{% if title %} | {% endif %}{{ site.name }}">
+{% if description %}
+<meta name="twitter:description" content="{{ description }}">
+{% endif %}
+
+{# Favicon #}
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+
+{# Preload hero image for faster LCP #}
+{% if heroImage %}
+<link rel="preload" as="image" href="{{ heroImage }}" fetchpriority="high">
+{% endif %}
+
+{# Stylesheets #}
+<link rel="stylesheet" href="/assets/css/base.css">
+<link rel="stylesheet" href="/assets/css/layout.css">
+<link rel="stylesheet" href="/assets/css/components.css">
