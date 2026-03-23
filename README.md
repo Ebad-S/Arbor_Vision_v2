@@ -3,7 +3,10 @@
 Professional **Arbor Vision Consulting** website for **Mike Daws** built as a lightweight, mobile-first, SEO-strong static site using [Eleventy (11ty)](https://www.11ty.dev/).
 
 ![Project snapshot](src/assets/images/snapshot.png)
-[Live Site](https://www.arborvision.consulting/) <!-- Update with the actual deployed URL when available -->
+
+[New DEMO Site](https://mike.preview.serenity-webcrafts.com.au) 
+
+[OLD Live Site](https://www.arborvision.consulting/) <!-- Update with the actual deployed URL when available -->
 
 
 ## Principles
